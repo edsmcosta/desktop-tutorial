@@ -1,124 +1,43 @@
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <meta charset=utf-8>
-        <title>HTML5 doctype example</title>
-        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+<head>
+    <title>Landing page</title>
+    <!--[BEG] Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Ed Costa's profile website">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Ed Costa">
+    <!--[END] Meta & title tags-->
 
-        <link type="text/css" rel="stylesheet" href="examples.css">
-    </head>
+    <!--[BEG] Style import
+    <link type="text/css" rel="stylesheet" href="style/site.css">
+    [END] Style import-->
 
-
+</head>
 <body>
     <header>
-        <h1></h1>
-        
-        <img class="user-photo" src="ed.jpg" alt="Selfie do Ed" width="960" height="1280">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html" target="_self">Home</a></li>
+                <li><a href="about.html" target="_self">About</a></li>
+                <li><a href="experience.html" target="_self">Experience</a></li>
+                <li><a href="contact.html" target="_self">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav id="nav">
-
-    </nav>
     <main>
-        <br/>
-        <p id="intro">Sou um parágrafo</p>
-        <h3>Contato:</h3>
-        <ul>
-            <li> 71 9956-5197</li>
-            <li> ed.costa@emcdl.com.br</li>
-        <li> 
-            <a target="_blank" href="https://www.linkedin.com/in/edsmcosta/" rel="noreferrer noopener">LinkedIn</a>
-        </li>
-        </ul>
-    </main>        
-    <main>
-    <!-- demonstração de organização de layout   -->
-        <div class="box-flex">
-            <div>One</div>
-            <div>Two</div>
-            <div>Three
-            <br>has
-            <br>extra
-            <br>text
-            </div>
-        </div>
-        <div class="box-grid">
-            <div class="one">One</div>
-            <div class="two">Two</div>
-            <div class="three">Three</div>
-            <div class="four">Four</div>
-            <div class="five">Five</div>
-            <div class="six">Six</div>
-        </div>
 
-        <!-- primeiro exemplo de JS -->
-        <p> Vou te contar um segredo: </p>        
-
-        <form name="frm1">
-            Nome: <input type="text" name="fname" placeholder="ed?" value=""><br>
-            Apelido: <input type="text" name="lname" placeholder="milson" value="" ><br><br>
-            <input type = "button" value = "Click me" onclick = "fun();" />  
-        </form>
-    </main>
-
+    </main>     
     <footer>
         <!-- segundo exemplo de JS -->
         <p id="demo"></p>
 
         <!-- Terceiro exemplo de JS -->
-        <input class="back-to-top" type = "button" value = "Voltar ao topo" />  
+        <input class="back-to-top" type="button" value="Voltar ao topo" />  
     </footer>
-<script>
-    /*This example finds all <p> elements:*/
-    const el1 = document.getElementsByTagName("p");
-    /*The easiest way to find an HTML element in the DOM, is by using the element id.*/
-    const el2 = document.getElementById("intro");
-
-    function fun() {
-        // Pimeiro exemplo
-        alert ("Javascript é muuuito legal! xP");
-        
-        // Segundo exemplo
-        // These are the values of each element in the form:
-        const x = document.forms["frm1"];
-        let text = "";
-        for (let i = 0; i < x.length ;i++) {
-        text += x.elements[i].value + "<br>";
-        }
-        document.getElementById("demo").innerHTML = text;
-    }
-    // Terceiro exemplo de JS
-    jQuery(document).ready(function() {
-    
-        var offset = 250;
-        
-        var duration = 300;
-        
-        jQuery(window).scroll(function() {
-        
-            if (jQuery(this).scrollTop() > offset) {
-            
-            jQuery('input.back-to-top').fadeIn(duration);
-            
-            } else {
-            
-            jQuery('input.back-to-top').fadeOut(duration);
-            
-            }
-    
-        });
-    
-    
-    
-        jQuery('input.back-to-top').click(function(event) {
-        
-            event.preventDefault();
-            jQuery('html, body').animate({scrollTop: 0}, duration);
-            
-            return false;
-            
-        })
-    
-    });
-
-</script>
+    <!-- [BEG] JavaScript import
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <script src="js/site.js"></script>
+    [END] JavaScript import -->
 </body>
+</html>
