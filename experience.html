@@ -28,13 +28,18 @@
     <main>
         <!-- Tabela Exemplo: -->
         <table>
-            <caption>Lista de Estudantes </caption>
-            <tr> <th colspan="2">Estudantes </th> </tr>  
-            <tr> <th> ID </th> <th>Nome </th> </tr>		
-            <tr> <td> 1. </td> <td>Alice </td> </tr>
-            <tr> <td> 2. </td> <td>Francisco </td> </tr>
-            <tr> <td> 3. </td> <td>Pedro </td> </tr>
-            <tfoot>
+            <thead>
+                <caption>Lista de Estudantes </caption>
+            </thead>
+            <tbody>
+                <tr> <th colspan="2">Estudantes </th> </tr>  
+                <tr> <th> ID </th><th>Nome </th> </tr>		
+                <tr> <td> 1. </td><td>Alice </td> </tr>
+                <tr> <td> 2. </td><td>Francisco </td> </tr>
+                <tr> <td> 3. </td><td>Pedro </td> </tr>
+            </tbody>
+            <tfoot >
+                <tr><td > Total </td> <td >3</td> </tr>
                 <tr><td colspan="2">Contém apenas estudantes dos últimos 2 anos</td></tr>
             </tfoot>
         </table>

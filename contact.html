@@ -36,9 +36,9 @@
         </ul>
 
         <!-- primeiro exemplo de JS -->
-        <form name="frm1">
+        <form action="javascript:fun();" method="" name="frm1">
             Nome: <input type="text" name="fname" placeholder="ed?" value=""><br>
-            Apelido: <input type="text" name="lname" placeholder="milson" value="" ><br><br>
+            Data de nascimento: <input type="text" name="lname" placeholder="milson" value="" ><br><br>
             <input type = "button" value = "Click me" onclick = "fun();" />  
         </form>
          <!-- segundo exemplo de FORMS -->
@@ -85,6 +85,12 @@
         <input class="back-to-top" type = "button" value = "Voltar ao topo" />  
     </footer>
     <!-- [BEG] JavaScript import -->
+    <script>
+        // Pimeiro exemplo de js integrado
+        function fun() {
+            alert("Javascript é muuuito legal! xP");
+        }
+    </script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <script type='text/javascript' src="js/site.js"></script>
     <!-- [END] JavaScript import -->
