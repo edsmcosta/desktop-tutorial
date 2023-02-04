@@ -4,8 +4,35 @@ body {
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:14px;
 	color:#333;
-	background:#fff url('images/body-bg.jpg') repeat-x;
 }
+
+main.m-one{
+    height: 600px;
+}
+
+div.landing    {
+    background-image: url('../img/capa2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-clip: text;
+    -webkit-background-clip: text; */
+    height: inherit;
+    margin: 0;
+    /* display: grid;
+    justify-content: space-evenly;
+    align-items: center; */
+}
+
+div.landing p{
+    /* color: transparent; */
+    color: white;
+    background-color: #333;
+    line-height: 3.5em;
+    margin: 0 auto;
+    width: 60%;
+}
+
 p {
 	line-height:1.9em;
 	margin-bottom:20px;
@@ -13,7 +40,12 @@ p {
 a {
 	color:#0D3C84;
 }
-
+a:hover {
+	color: red;
+}
+a:focus {
+	outline:none;
+}
 /* primeiro exemplo CSS */
 header {
     top: 0;
@@ -56,6 +88,23 @@ padding: 16px;
 text-decoration: none;
 }
 
+table tr th { /* table tr th */
+    background-color: black;
+    color: white;
+}
+
+table tfoot tr:first-child{
+    background-color: black;
+    color: white;
+}
+table tfoot tr:last-child{
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+}
+section.table-results table{
+    margin: auto;
+}
 form{
     display: table;
 }
@@ -83,12 +132,6 @@ img {
 
 
 /* exemplo avançado CSS */
-a:hover {
-	color: red;
-}
-a:focus {
-	outline:none;
-}
 .user-photo:hover {
     transform: scale(1.25);
     animation-name: spin;
@@ -158,6 +201,7 @@ grid-row: 4;
 /* Terceiro exemplo de JS */
 
 footer {
+    position: fixed;
     margin: 300px 20px 0px 20px  ;
     bottom: 0;    
     right: 0;
