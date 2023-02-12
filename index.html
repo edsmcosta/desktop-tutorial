@@ -7,6 +7,7 @@
     <meta name="description" content="Ed Costa's profile website">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Ed Costa">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[END] Meta & title tags-->
 
     <!-- [BEG] Style import -->
@@ -23,16 +24,17 @@
                     <li><a href="index.html" target="_self">Home</a></li>
                     <li><a href="about.html" target="_self">About</a></li>
                     <li><a href="experience.html" target="_self">Experience</a></li>
-                    <li><a href="contact.html" target="_self">Contact</a></li>
+                    <li><a href="contact.html" target="_blank">Contact</a></li>
                 </ul>
             </nav>
 
-            <img src="img/ed.jpg" width="15px" height="15px">
+            <img class="user-photo" src="img/ed.jpg" width="150px" height="150px">
         </section>
     </header>
     <main class="m-one">
         <div class="landing">
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            
         </div>
     </main>     
     <footer>
@@ -42,9 +44,43 @@
         <!-- Terceiro exemplo de JS -->
         <input class="back-to-top bloco" type="button" value="Voltar ao topo" />  
     </footer>
-    <!-- [BEG] JavaScript import
+     <!-- [BEG] JavaScript import -->
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <script src="js/site.js"></script>
-    [END] JavaScript import -->
+    <!-- [END] JavaScript import -->
+    <script>
+        // Terceiro exemplo de JS
+jQuery(document).ready(function() {
+
+var offset = 250;
+
+var duration = 300;
+
+jQuery(window).scroll(function() {
+
+    if (jQuery(this).scrollTop() > offset) {
+    
+    jQuery('input.back-to-top').fadeIn(duration);
+    
+    } else {
+    
+    jQuery('input.back-to-top').fadeOut(duration);
+    
+    }
+
+});
+
+
+
+jQuery('input.back-to-top').click(function(event) {
+
+    event.preventDefault();
+    jQuery('html, body').animate({scrollTop: 0}, duration);
+    
+    return false;
+    
+})
+
+    </script>
 </body>
 </html>
